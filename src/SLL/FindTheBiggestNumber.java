@@ -9,6 +9,34 @@ import java.io.InputStreamReader;
 
 public class FindTheBiggestNumber {
 
+    public static void sort(SLL<Integer> lista) {
+        SLLNode<Integer> k1 = lista.getFirst();
+        while (k1 != null) {
+            SLLNode<Integer> k2 = lista.getFirst();
+            while (k2 != null) {
+                if (k1.element > k2.element) {
+                    int tmp = k1.element;
+                    k1.element = k2.element;
+                    k2.element = tmp;
+                }
+                k2 = k2.succ;
+            }
+            k1 = k1.succ;
+        }
+    }
+
+    public static void pecati(SLL<Integer> lista) {
+        SLLNode<Integer> k1 = lista.getFirst();
+        while (k1 != null){
+            if (k1.succ == null){
+                System.out.print(k1.element);
+                break;
+            }
+            System.out.print(k1.element + " ");
+            k1 = k1.succ;
+        }
+    }
+
     public static int findLargestNumber(SLL<Integer> lista) {
         SLLNode<Integer> k1 = lista.getFirst();
         int max = 0;
@@ -21,11 +49,12 @@ public class FindTheBiggestNumber {
         }
         return max;
     }
-    public static int findSmallestNumber(SLL<Integer> lista){
-        SLLNode<Integer>k1 = lista.getFirst();
-        SLLNode<Integer>min = lista.getFirst();
-        while (k1 !=null){
-            if (min.element>k1.element){
+
+    public static int findSmallestNumber(SLL<Integer> lista) {
+        SLLNode<Integer> k1 = lista.getFirst();
+        SLLNode<Integer> min = lista.getFirst();
+        while (k1 != null) {
+            if (min.element > k1.element) {
                 min.element = k1.element;
                 k1 = k1.succ;
             }

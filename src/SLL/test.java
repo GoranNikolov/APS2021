@@ -5,6 +5,7 @@ import codeForSLLandDLL.SLL;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Iterator;
 
 public class test {
 
@@ -29,5 +30,13 @@ public class test {
             StringLista.insertLast(pomniza[i]);
         }
         System.out.println(StringLista);
+
+        Iterator<String> tmp = StringLista.iterator();
+        while (tmp.hasNext()){
+            System.out.print(tmp.next());
+            if (tmp.hasNext()){
+                System.out.print(" ");
+            }
+        }
     }
 }
