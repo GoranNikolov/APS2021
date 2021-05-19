@@ -27,10 +27,9 @@ public class FindTheBiggestNumber {
 
     public static void pecati(SLL<Integer> lista) {
         SLLNode<Integer> k1 = lista.getFirst();
-        while (k1 != null) {
-            if (k1.succ == null) {
+        while (k1 != null){
+            if (k1.succ == null){
                 System.out.print(k1.element);
-                System.out.println();
                 break;
             }
             System.out.print(k1.element + " ");
@@ -45,9 +44,8 @@ public class FindTheBiggestNumber {
             if (k1.element > max) {
                 max = k1.element;
                 k1 = k1.succ;
-            } else {
-                k1 = k1.succ;
             }
+            k1 = k1.succ;
         }
         return max;
     }
@@ -75,9 +73,6 @@ public class FindTheBiggestNumber {
         }
         System.out.println(findLargestNumber(lista));
         System.out.println(findSmallestNumber(lista));
-        pecati(lista);
-        sort(lista);
-        pecati(lista);
 
     }
 }
