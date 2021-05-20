@@ -10,7 +10,7 @@ public class testHash {
     public static void main(String[] args) throws IOException {
         BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
         Integer n = Integer.parseInt(stdin.readLine());
-        CBHT<String,String> table = new CBHT<>(2*n);
+        CBHT<String,String> table = new CBHT<>(2);
         for (int i = 0; i < n ; i++) {
             String []pom = stdin.readLine().split(" ");
             table.insert(pom[0],pom[1]);

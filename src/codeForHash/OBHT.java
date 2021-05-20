@@ -4,19 +4,19 @@ public class OBHT<K extends Comparable<K>,E> {
 
     // An object of class OBHT is an open-bucket hash table, containing entries 
     // of class MapEntry.
-    private MapEntry<K,E>[] buckets;
+    public MapEntry<K,E>[] buckets;
     
     // buckets[b] is null if bucket b has never been occupied. 
     // buckets[b] is former if bucket b is formerly-occupied 
     // by an entry that has since been deleted (and not yet replaced).
 
     static final int NONE = -1; // ... distinct from any bucket index.
-    
-    private static final MapEntry former = new MapEntry(null, null);
+
+    public static final MapEntry former = new MapEntry(null, null);
     // This guarantees that, for any genuine entry e, 
     // e.key.equals(former.key) returns false.
-    
-    private int occupancy = 0;
+
+    public int occupancy = 0;
     // ... number of occupied or formerly-occupied buckets in this OBHT.
     
     @SuppressWarnings("unchecked")
@@ -26,7 +26,7 @@ public class OBHT<K extends Comparable<K>,E> {
     }
 
 
-    private int hash (K key) {
+    public int hash (K key) {
     // Translate key to an index of the array buckets.
         return Math.abs(key.hashCode()) % buckets.length;
     }

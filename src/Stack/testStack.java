@@ -7,7 +7,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class test {
+public class testStack {
     public static void main(String[] args) throws IOException {
         BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
         LinkedStack<Integer> stek =  new LinkedStack<Integer>();

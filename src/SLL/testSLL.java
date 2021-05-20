@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Iterator;
 
-public class test {
+public class testSLL {
 
     public static void testOne(String str, Integer broj) {
         String bString = String.valueOf(broj);
