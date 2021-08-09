@@ -15,6 +15,6 @@ public class testQueue {
         for (int i = 0; i < n  ; i++) {
             redica.enqueue(Integer.parseInt(pom[i]));
         }
-        System.out.println(redica.peek());
+        redica.dequeue();
     }
 }
